@@ -84,16 +84,16 @@ start:
 	call	PSGPlay
 
 _loopVBL:
-	ld	a, tmsdarkred		; set background color
-	call	tmsbackground
+;	ld	a, tmsdarkred		; set background color
+;	call	tmsbackground
 	call	PSGFrame		; process next music frame
 
-	ld	a, tmsdarkred		; set background color
-	call	tmsbackground
+;	ld	a, tmsdarkred		; set background color
+;	call	tmsbackground
 	call	drawframe 
 
-	ld	a, tmsgray		; set background color
-	call	tmsbackground
+;	ld	a, tmsgray		; set background color
+;	call	tmsbackground
 	call	waitForVBlank		; wait for vertical blanking
 
 	jp	_loopVBL
